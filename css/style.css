@@ -1,0 +1,180 @@
+/*================================
+================PÁGINA 1==========
+================================*/
+
+
+.contenedor > * {
+    background: powderblue;
+    text-align:center;
+    padding: 1%;
+    border: black 0.1em solid;
+}
+
+.contenedor {
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+    "header     header"
+    "nav        nav"
+    "section    section"
+    "section2   section2"
+    "footer     footer"
+}
+
+.contenedor header {
+    background: orange;
+    grid-area: header;
+    padding: 2%;
+}
+
+.contenedor nav {
+    background: green;
+    grid-area: nav;
+    padding: 0.1%;
+}
+
+.contenedor section {
+    grid-area: section;
+    padding: 0.1%;
+}
+
+.contenedor #section2 {
+    padding: 1%;
+    grid-area: section2;
+}
+
+.contenedor footer {
+    background: grey;
+    grid-area: footer;
+    color:white;
+}
+
+/*Cabecera*/
+
+#cabeceratexto {
+    font-size: 275%;
+}
+
+#logocabe {
+    width: 10%;
+}
+
+/*Menú*/
+
+li  {
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a {
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+}
+li a:hover:not(.activo) {
+    background-color: darkgreen;
+}
+
+.activo {
+    background-color: greenyellow;
+}
+
+/*Sección*/
+
+video {
+    width: 100%;
+}
+
+/*Sección 2*/
+
+ol {
+    list-style-type: none;
+}
+
+ol .li2 {
+    display: flex;
+    border: red 0.1em solid;
+}
+
+.li2 > *:hover {
+    zoom: 150%;
+}
+
+/*==============================
+============PÁGINA 2==========*/
+
+.contenedor2 > * {
+    background: powderblue;
+    text-align:center;
+    padding: 1%;
+    border: black 0.1em solid;
+}
+
+.contenedor2 {
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+    "header     header"
+    "nav            nav"
+    "aside       aside2" 
+    "footer     footer"
+}
+
+.contenedor2 header {
+    background: orange;
+    grid-area: header;
+    padding: 2%;
+}
+
+.contenedor2 nav {
+    background: green;
+    grid-area: nav;
+    padding: 0.1%;
+}
+
+.contenedor2 aside {
+    background: powderblue;
+    grid-area: aside;
+    padding: 20%;
+}
+
+.contenedor2 #aside2 {
+    background: powderblue;
+    grid-area: aside2;
+}
+
+.contenedor2 footer {
+    background: grey;
+    grid-area: footer;
+    color: white;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 760px) {
+    .contenedor2 {
+        display: grid;
+        grid-gap: 1%;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: 
+        "header     header"
+        "nav        nav"
+        "aside       aside" 
+        "footer     footer"
+    }
+    .contenedor2 aside {
+        grid-area: aside;
+    }
+    .contenedor2 #aside2 {
+        display: none;
+    }
+
+}
